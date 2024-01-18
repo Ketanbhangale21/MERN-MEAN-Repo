@@ -1,0 +1,134 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  height: 100vh;
+}
+h1 {
+  color: #3c763d;
+}
+nav {
+  background: linear-gradient(#288389, #001e1a);
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 10px;
+}
+li {
+  padding: 5px 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: 0.3s ease-in-out;
+  /* border: 1px; */
+  border: 1px solid wheat;
+}
+a:hover {
+  color: #f6d47b;
+  background-color: #333;
+  border-radius: 10px;
+  border: 1px solid wheat;
+  cursor: pointer;
+}
+#img {
+  height: 300px;
+  border: 5px solid rgb(226, 159, 159);
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+#img:hover {
+  transform: scale(1.03);
+  box-shadow: 10px 10px 10px 0px #333;
+  /* transform: rotateY(20deg); */
+}
+#login-img {
+  width: 100%;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #001e1a;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+fieldset {
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+.products-form-outer {
+  display: flex;
+  justify-content: center;
+}
+.products-form-inner {
+  background: linear-gradient(#288389, #001e1a);
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.input-fields {
+  border-radius: 20px;
+}
+.label {
+  color: white;
+}
+button {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid wheat;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 2px 12px 0px #fff;
+  color: #f6d47b;
+  background-color: #333;
+  border-radius: 20px;
+  border: 1px solid wheat;
+  cursor: pointer;
+}
+span {
+  margin: 10px;
+  font-size: 15spx;
+  text-align: center;
+}
