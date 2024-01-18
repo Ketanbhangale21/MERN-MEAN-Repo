@@ -1,0 +1,34 @@
+<head>
+  <style>
+    body { display: flex; justify-content: center; } img { border-radius: 50%;
+    border: 1px solid red; padding: 2px; } div { margin-top: 10px; color: Green;
+    font-family: roboto; border: 1px solid red; padding: 10px; width: 500px;
+    height: fit-content; } table { width: 100%; border-collapse: collapse;
+    margin-top: 20px; } th, td { border: 1px solid #ddd; padding: 8px;
+    text-align: left; } th { background-color: #f2f2f2; } tr:nth-child(even) {
+    background-color: #f9f9f9; } tr:hover { background-color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <div>
+    <h3 align="center">Assignment 2 Day-2</h3>
+    <br />
+    <hr />
+    <table>
+      <tr>
+        <thead>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+        </thead>
+      </tr>
+      {{#each customerObj}}
+        <tr>
+          <td>{{this.Name}}</td>
+          <td>{{this.City}}</td>
+          <td>{{this.Country}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</body>
