@@ -13,7 +13,7 @@ function ProductsEx() {
   return (
     <div>
       <fieldset>
-        <legend>User Login</legend>
+        <legend>Products</legend>
         Product Name : {pname} <br />
         Price : {price} <br />
         Quantity : {quantity} <br />
