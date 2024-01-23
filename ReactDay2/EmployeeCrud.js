@@ -58,7 +58,8 @@ function EmployeeCrud() {
   }
 
   return (
-    <div>
+    <div align="center">
+     <div style={{ border: "2px solid red", padding: "10px", width: "500px" }}>
       <h2>Employee CRUD Operations</h2>
       <table border="1">
         <thead>
@@ -164,6 +165,7 @@ function EmployeeCrud() {
 
       <button onClick={clearForm}>Clear Form</button>
     </div>
+</div>
   );
 }
 
