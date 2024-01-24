@@ -47,6 +47,7 @@ class TodoList extends Component {
             width: "500px",
             border: "2px solid black",
             borderRadius: "20px",
+            overflow: "auto",
           }}
         >
           <h2
