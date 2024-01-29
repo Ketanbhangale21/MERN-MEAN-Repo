@@ -2,13 +2,11 @@ import axios from "axios";
 import React, { useState } from "react";
 import "./login.css";
 import { useLocation, useNavigate } from "react-router-dom";
-// import { useHistory } from "react-router-dom"; // Assuming you're using React Router for navigation
 
 function LoginComponent() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [fieldsEmpty, setFieldsEmpty] = useState("");
-  // const history = useHistory();
   const [userData, setUserData] = useState([]);
 
   let navigate = useNavigate();
@@ -33,6 +31,7 @@ function LoginComponent() {
 
   const login = (username, password) => {
     setFieldsEmpty("");
+    
     // Make API call to fetch user data
     let url = "http://localhost:3005/api/users";
     axios
@@ -53,10 +52,8 @@ function LoginComponent() {
             if (isDataRegistered.emailid === "admin@example.com") {
               alert("Logged In Success \n Welcome Admin");
             }
-            // history.push("/students");
-            // alert("Logged In Success");
             const queryString = location.search; // returns the query string from the current url
-            // let strReturnUrl  =  new URLSearchParams(search).get('key');
+ 
             let strReturnUrl = new URLSearchParams(queryString).get(
               "returnUrl"
             );
@@ -64,11 +61,9 @@ function LoginComponent() {
             if (strReturnUrl == null) {
               strReturnUrl = "/";
             }
-            // In real-time apps, we will get the token from the server
-            // JWT token is the popular token generation library
+   
             let token = "ASJDFJF87ADF8745LK4598SAD7FAJSDF45JSDLFKAS";
             sessionStorage.setItem("user-token", token);
-            // navigate("/Depts");
             navigate(strReturnUrl);
           } else {
             setFieldsEmpty("Incorrect Password");
