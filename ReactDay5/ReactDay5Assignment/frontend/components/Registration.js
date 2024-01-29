@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import "./login.css";
 
-// import { useHistory } from "react-router-dom"; // Assuming you're using React Router for navigation
 
 function RegisterComponent() {
   const [username, setUsername] = useState("");
@@ -10,10 +9,10 @@ function RegisterComponent() {
   const [repassword, setRepassword] = useState("");
   const [fieldsEmpty, setFieldsEmpty] = useState("");
   const [isDataRegistered, setisDataRegistered] = useState({});
-  //   const [passwordCorrect, setPasswordCorrect] = useState(false);
+
   const [userData, setUserData] = useState([]);
   const [emailid, setEmail] = useState("");
-  //   const history = useHistory();
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ function RegisterComponent() {
     setisDataRegistered(
       userData.find((user) => user.emailid === username.toLowerCase())
     );
-    // console.log(isDataRegistered);
+
 
     if (isDataRegistered.emailid === username) {
       setFieldsEmpty("This Email id is already registered !!");
@@ -100,7 +99,7 @@ function RegisterComponent() {
     let url = "http://localhost:3005/api/register/user";
     axios.post(url, dataObj).then((resData) => {
       alert("New User registration successful");
-      //   history.push("/"); // Redirect to login page after successful registration
+
     });
   }
 
