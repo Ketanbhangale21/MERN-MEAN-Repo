@@ -9,17 +9,16 @@ function EmployeeTable() {
     { id: 4, name: "Emily Brown", department: "HR", salary: 52000 },
     { id: 5, name: "David Lee", department: "Sales", salary: 58000 },
   ];
-  const rows = [];
-  for (let employee of employees) {
-    rows.push(
+  let result = employees.map((item, index) => {
+    return (
       <tr>
-        <td>{employee.id}</td>
-        <td>{employee.name}</td>
-        <td>{employee.department}</td>
-        <td>{employee.salary}</td>
+        {Object.values(item).map((value) => (
+          <td>{value}</td>
+        ))}
       </tr>
     );
-  }
+  });
+
   return (
     <div>
       <h2>Employee Table</h2>
@@ -32,7 +31,7 @@ function EmployeeTable() {
             <th>Salary</th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        <tbody>{result}</tbody>
       </table>
     </div>
   );
