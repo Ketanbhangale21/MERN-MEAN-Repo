@@ -11,7 +11,7 @@ const bankReducer = (state, action) => {
       updatedState.balance = state.balance + parseFloat(action.amount);
       break;
     case "WITHDRAW":
-      if (state.balance - action.amount > 500) {
+      if (state.balance - action.amount >= 500) {
         if (state.balance < parseFloat(action.amount)) {
           alert("Insufficient Balance");
           updatedState.balance = state.balance;
